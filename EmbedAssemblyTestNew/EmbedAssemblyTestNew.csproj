@@ -8,11 +8,29 @@
     <ApplicationId>de.embedassemblytest.EmbedAssemblyTest</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <AndroidEnablePreloadAssemblies>True</AndroidEnablePreloadAssemblies>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <_AfterAddStaticResources>
+      $(_AfterAddStaticResources);
+      ForcePreload;
+    </_AfterAddStaticResources>
+  </PropertyGroup>
+  <Target Name="ForcePreload">
+    <PropertyGroup>
+      <_AndroidEnablePreloadAssembliesDefault>True</_AndroidEnablePreloadAssembliesDefault>
+    </PropertyGroup>
+  </Target>
+
   <ItemGroup>
     <ProjectReference Include="..\EmbedTestNew.AndroidLibrary1\EmbedTestNew.AndroidLibrary1.csproj" />
     <ProjectReference Include="..\EmbedTestNew.AndroidLibrary2\EmbedTestNew.AndroidLibrary2.csproj" />
     <ProjectReference Include="..\EmbedTestNew.ClassLibrary1\EmbedTestNew.ClassLibrary1.csproj" />
     <ProjectReference Include="..\EmbedTestNew.ClassLibrary2\EmbedTestNew.ClassLibrary2.csproj" />
   </ItemGroup>
+
+
+
+
 </Project>

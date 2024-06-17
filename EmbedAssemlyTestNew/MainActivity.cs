@@ -1,11 +1,11 @@
-﻿using Android.App;
-using Android.OS;
-using Android.Runtime;
-using AndroidX.AppCompat.App;
-using System;
+﻿using System;
 using System.Linq;
+using Android.App;
+using Android.OS;
+using AndroidX.AppCompat.App;
 using EmbedTestOld.AndroidLibrary1;
 using EmbedTestOld.ClassLibrary1;
+using Resource = EmbedAssemblyTestOld.Resource;
 
 namespace EmbedAssemlyTestOld
 {
